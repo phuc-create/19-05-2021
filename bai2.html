@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LAB2</title>
+</head>
+	<style>
+		p.dotted {border-style: dotted;color: blue;}
+		p.dashed {border-style: dashed;}
+		p.solid {border-style: solid;}
+		p.double {border-style: double;}
+		p.groove {border-style: groove;color: pink;}
+		p.ridge {border-style: ridge;}
+		p.inset {border-style: inset; color: red;}
+		p.outset {border-style: outset;}
+		p.none {border-style: none;}
+		p.hidden {border-style: hidden;}
+		p.mix {border-style: dotted dashed solid double;}
+		div{width: 100%;
+		height: auto;
+		border: 1px solid red;}
+		.b1{
+			background: lightblue;
+			
+		}.b2{
+			background: lightblue;
+			
+		}
+		
+	</style>
+
+<body>
+	<div class="b1">
+	<h1>My first css example</h1>
+		<p>This is a paragraph </p>
+	</div>
+	
+	<div class="b2">
+		<h1>Định nghĩa màu nền và mầu chữ</h1>
+		<h1 style="color: red">Hello world</h1>
+		<h1 style="color: tomato">Hello world</h1>
+		<h1 style="color: mediumblue">Hello world</h1>
+		<h1 style="color: mediumseagreen">Hello world</h1>
+		<h1 style="color: darkorange">Hello world</h1>
+		<p>this page has light blue color</p>
+	</div>
+	
+	<div class="b3">
+		<h1>khung viền (border) và màu kết hợp</h1>
+		<p class="dotted">A dotted border.</p>
+<p class="dashed">A dashed border.</p>
+<p class="solid">A solid border.</p>
+<p class="double">A double border.</p>
+<p class="groove">A groove border.</p>
+<p class="ridge">A ridge border.</p>
+<p class="inset">An inset border.</p>
+<p class="outset">An outset border.</p>
+<p class="none">No border.</p>
+<p class="hidden">A hidden border.</p>
+<p class="mix">A mixed border.</p>
+	
+	</div>
+	
+	<div class="b4">
+	<h1>Kết hợp border với margin</h1>
+		<p>trường hợp phần tử width có div</p>
+		<p style="border: 1px solid red;padding: 20px;margin-left: inherit">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus temporibus excepturi, non modi corporis quaerat!</p>
+	</div>
+	
+	<div class="b5">
+	<h1 style="border: 1px solid red;padding: 20px">Kết hợp border với padding 20px</h1>
+		<h1 style="border: 1px solid red;padding: 40px">Kết hợp border với padding 40px</h1>
+		<h1 style="border: 1px solid red;padding: 50px;margin: 0px 0px 0px 100px">Kết hợp border với padding 50px và margin là 100px</h1>
+	</div>
+</body>
+</html>
