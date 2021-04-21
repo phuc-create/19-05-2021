@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100;400');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(0, 0, 0, .9)), repeating-linear-gradient(0, transparent, transparent 4px, black 0px, black -3px), url("../img/init.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.span {
+    color: rgb(100, 220, 220);
+    letter-spacing: 1em;
+}
+
+.cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: transform .2s, border-radius .5s;
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+.main {
+    position: relative;
+    @include flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    background-position: center;
+    z-index: 1;
+    .main__txt {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 200px;
+        height: 40px;
+        @include flex;
+        flex-direction: column;
+        z-index: 1;
+        h1._m-text {
+            position: relative;
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        ._m-line {
+            width: 0%;
+            height: 2px;
+            background: #fff;
+            position: relative;
+            transition: .5s ease;
+            &.setFull {
+                width: 100%;
+            }
+        }
+    }
+    .main__content {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        @include flex;
+        overflow: hidden;
+        .main__overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transition: .3s;
+            pointer-events: none;
+            z-index: 1;
+            &.is-active {
+                background: rgba(0, 0, 0, 0.7);
+            }
+        }
+        .main__left,
+        .main__right {
+            height: 100%;
+            color: #fff;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .main__left {
+            width: 55%;
+            padding-left: 5%;
+            transition: .5s ease;
+            p {
+                font-size: 25px;
+                .splited {
+                    transition: all .5s ease;
+                }
+                &:hover .splited {
+                    margin-right: 1px;
+                }
+            }
+            h1 {
+                font-size: 35px;
+                font-weight: 700;
+                .splited {
+                    transition: all .5s ease;
+                }
+                &:hover .splited {
+                    margin-right: 1px;
+                }
+            }
+            .main__btn {
+                width: 200px;
+                height: 40px;
+                position: relative;
+                text-align: left;
+                background: transparent;
+                color: #fff;
+                font-size: 25px;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    background: #fff;
+                    transition: .2s;
+                }
+                &:hover:before {
+                    width: 100%;
+                }
+                .main__btn-abs {
+                    position: absolute;
+                    top: 50%;
+                    right: 5%;
+                    opacity: 0;
+                    transition: .4s;
+                }
+                &:hover>.main__btn-abs {
+                    opacity: 1;
+                    right: -8%;
+                }
+            }
+        }
+        .main__right {
+            width: 45%;
+            .__right-pic {
+                position: relative;
+                width: 100%;
+                height: 130%;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -3%;
+                    left: 0;
+                    width: 100%;
+                    height: 100px;
+                    background: linear-gradient(rgba(0, 0, 0, 0.9) 20%, transparent 80%);
+                    z-index: 1;
+                    pointer-events: none;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100px;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+                    z-index: 1;
+                    pointer-events: none;
+                }
+                .main__wrapper-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 10%;
+                        height: 100%;
+                        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+                        z-index: 1;
+                        pointer-events: none;
+                    }
+                }
+                img {
+                    transition: .5s;
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 80%;
+                        height: 100%;
+                    }
+                    &:nth-child(1) {
+                        opacity: .7;
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:hover {
+                        &:nth-child(1) {
+                            opacity: 0;
+                        }
+                        &:nth-child(2) {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

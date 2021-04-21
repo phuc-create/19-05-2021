@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100;400");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(0, 0, 0, 0.9)), repeating-linear-gradient(0, transparent, transparent 4px, black 0px, black -3px), url("../img/init.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.span {
+  color: #64dcdc;
+  letter-spacing: 1em;
+}
+
+.cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: transform 0.2s, border-radius 0.5s;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  background-position: center;
+  z-index: 1;
+}
+.main .main__txt {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.main .main__txt h1._m-text {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main .main__txt ._m-line {
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  transition: 0.5s ease;
+}
+.main .main__txt ._m-line.setFull {
+  width: 100%;
+}
+.main .main__content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.main .main__content .main__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: 0.3s;
+  pointer-events: none;
+  z-index: 1;
+}
+.main .main__content .main__overlay.is-active {
+  background: rgba(0, 0, 0, 0.7);
+}
+.main .main__content .main__left,
+.main .main__content .main__right {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .main__content .main__left {
+  width: 55%;
+  padding-left: 5%;
+  transition: 0.5s ease;
+}
+.main .main__content .main__left p {
+  font-size: 25px;
+}
+.main .main__content .main__left p .splited {
+  transition: all 0.5s ease;
+}
+.main .main__content .main__left p:hover .splited {
+  margin-right: 1px;
+}
+.main .main__content .main__left h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.main .main__content .main__left h1 .splited {
+  transition: all 0.5s ease;
+}
+.main .main__content .main__left h1:hover .splited {
+  margin-right: 1px;
+}
+.main .main__content .main__left .main__btn {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  text-align: left;
+  background: transparent;
+  color: #fff;
+  font-size: 25px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.main .main__content .main__left .main__btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: 0.2s;
+}
+.main .main__content .main__left .main__btn:hover:before {
+  width: 100%;
+}
+.main .main__content .main__left .main__btn .main__btn-abs {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  opacity: 0;
+  transition: 0.4s;
+}
+.main .main__content .main__left .main__btn:hover > .main__btn-abs {
+  opacity: 1;
+  right: -8%;
+}
+.main .main__content .main__right {
+  width: 45%;
+}
+.main .main__content .main__right .__right-pic {
+  position: relative;
+  width: 100%;
+  height: 130%;
+}
+.main .main__content .main__right .__right-pic::before {
+  content: "";
+  position: absolute;
+  top: -3%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.9) 20%, transparent 80%);
+  z-index: 1;
+  pointer-events: none;
+}
+.main .main__content .main__right .__right-pic::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+.main .main__content .main__right .__right-pic .main__wrapper-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .main__content .main__right .__right-pic .main__wrapper-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+.main .main__content .main__right .__right-pic img {
+  transition: 0.5s;
+}
+.main .main__content .main__right .__right-pic img:nth-child(1), .main .main__content .main__right .__right-pic img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+}
+.main .main__content .main__right .__right-pic img:nth-child(1) {
+  opacity: 0.7;
+}
+.main .main__content .main__right .__right-pic img:nth-child(2) {
+  opacity: 0;
+}
+.main .main__content .main__right .__right-pic img:hover:nth-child(1) {
+  opacity: 0;
+}
+.main .main__content .main__right .__right-pic img:hover:nth-child(2) {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

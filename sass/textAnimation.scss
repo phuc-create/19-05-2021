@@ -1,0 +1,94 @@
+@mixin copyGlitch {
+    content: attr(data-txt);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1.txt {
+    font-size: 6rem;
+    position: relative;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #fff;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+    &::before {
+        @include copyGlitch;
+        left: 2px;
+        text-shadow: -2px 0 #eb2f06;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-ani 5s infinite linear alternate-reverse;
+    }
+    &::after {
+        @include copyGlitch;
+        left: -2px;
+        text-shadow: -2px 0 #eb2f06, 2px 2px #EA2027;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-ani2 1s infinite linear alternate-reverse;
+    }
+}
+
+h1._m-text {
+    &::before {
+        @include copyGlitch;
+        left: 2px;
+        text-shadow: -2px 0 #eb2f06;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-ani 5s infinite linear alternate-reverse;
+    }
+    &::after {
+        @include copyGlitch;
+        left: -2px;
+        text-shadow: -2px 0 #eb2f06, 2px 2px #EA2027;
+        clip: rect(44px, 450px, 56px, 0);
+    }
+}
+
+.__txt-main {
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+    &::before {
+        @include copyGlitch;
+        left: 2px;
+        text-shadow: -2px 0 #eb2f06;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-ani 5s infinite linear alternate-reverse;
+    }
+    &::after {
+        @include copyGlitch;
+        left: -2px;
+        text-shadow: -2px 0 #eb2f06, 2px 2px #EA2027;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-ani2 1s infinite linear alternate-reverse;
+    }
+}
+
+@keyframes glitch-skew {
+    $steps: 10;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            transform: skew((random(10) - 5) +deg);
+        }
+    }
+}
+
+@keyframes glitch-ani {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+            transform: skew((random(100) / 100) +deg);
+        }
+    }
+}
+
+@keyframes glitch-ani2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+            transform: skew((random(100) / 100) +deg);
+        }
+    }
+}
