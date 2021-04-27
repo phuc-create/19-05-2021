@@ -8,6 +8,7 @@ window.addEventListener("mousemove", (e) => {
     cursor.style.top = e.pageY + "px";
     cursor.style.left = e.pageX + "px";
 });
+//set zoom for h1
 txtH.forEach(txtSingleH => {
     txtSingleH.addEventListener("mouseover", () => {
         cursor.style.transform = "translate(-50%, -50%) scale(12)";
@@ -22,7 +23,7 @@ txtH.forEach(txtSingleH => {
         overlayMain.classList.remove("is-active");
     });
 });
-
+//set zoom for p
 txtP.forEach(txtSingleP => {
     txtSingleP.addEventListener("mouseover", () => {
         cursor.style.transform = "translate(-50%, -50%) scale(7)";
@@ -38,7 +39,7 @@ txtP.forEach(txtSingleP => {
         overlayMain.classList.remove("is-active");
     });
 });
-
+//set scroll for wwindow
 document.addEventListener("scroll", (e) => {
     let windowScroll = window.scrollY;
     if (windowScroll > 181) {
@@ -47,24 +48,24 @@ document.addEventListener("scroll", (e) => {
         lineAbout.classList.remove("setFull");
     };
 });
-
+//btn control in page 2
 const nextPage = document.getElementById("main__btn-abs");
 const setSlide = document.querySelector(".main__slider");
 
-let firstSlide = 0
+let firstSlide = 0;
 nextPage.addEventListener("click", () => {
     firstSlide -= 50;
     console.log(firstSlide);
     setSlide.style.transform = `translateX(${firstSlide}%)`;
     setTimeout(() => {
         if (!lineAbout2.classList.contains("fullline")) {
-            lineAbout2.classList.add("fullline")
+            lineAbout2.classList.add("fullline");
         } else {
-            lineAbout2.classList.remove("fullline")
+            lineAbout2.classList.remove("fullline");
         }
     }, 1000);
-})
-
+});
+//all property when click control btns
 const mainBtnPrev = document.getElementById("m__prev");
 const mainBtnNext = document.getElementById("m__next");
 const imgSlider = document.getElementById("transformImgs");
@@ -75,9 +76,55 @@ let indexImg = 0;
 let indexTopic = 0;
 mainBtnNext.addEventListener("click", () => {
     indexImg += 100;
-    imgSlider.style.transform = `translateY(-${indexImg}%)`;
     indexTopic += 1;
+    if (indexImg > 300) {
+        indexImg = 0;
+        indexTopic = 0;
+    };
+    imgSlider.style.transform = `translateY(-${indexImg}%)`;
+
     topicSlider.style.transform = `translateY(-${indexTopic * 25}%)`;
-    contentSilder.style.transform = `translateY(-${indexTopic * 25}%)`;
+    contentSilder.style.transform = `translateX(-${indexTopic * 25}%)`;
+
+
+});
+mainBtnPrev.addEventListener("click", () => {
+
+        indexImg -= 100;
+        indexTopic -= 1;
+        if (indexImg < 0) {
+            indexImg = 300;
+            indexTopic = 3;
+        };
+        imgSlider.style.transform = `translateY(-${indexImg}%)`;
+        topicSlider.style.transform = `translateY(-${indexTopic * 25}%)`;
+        contentSilder.style.transform = `translateX(-${indexTopic * 25}%)`;
+    })
+    //all page of main controled here !
+const mainBarSingle = document.querySelectorAll(".main-bar-single");
+const lineBarSingle = document.querySelectorAll(".-bar-single");
+
+mainBarSingle.forEach((BarSingle, i) => {
+    i = i * 25;
+    BarSingle.setAttribute(`style`, `--index:${i}`);
+    BarSingle.addEventListener("click", () => {
+        const actived = document.querySelector(".main-bar-single.active");
+        actived.classList.remove("active");
+        setSlide.style.transform = `translateX(-${i}%)`;
+        if (!BarSingle.classList.contains("active")) {
+            BarSingle.classList.add("active");
+        }
+
+
+        lineBarSingle.forEach((line) => {
+            if (i == 25) {
+                line.style.background = "#000";
+            } else {
+                line.style.background = "#fff";
+
+            }
+        })
+
+    });
 
 })
