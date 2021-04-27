@@ -54,7 +54,7 @@ const setSlide = document.querySelector(".main__slider");
 
 let firstSlide = 0;
 nextPage.addEventListener("click", () => {
-    firstSlide -= 50;
+    firstSlide -= 25;
     console.log(firstSlide);
     setSlide.style.transform = `translateX(${firstSlide}%)`;
     setTimeout(() => {
