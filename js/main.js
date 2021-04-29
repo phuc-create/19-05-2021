@@ -52,19 +52,39 @@ document.addEventListener("scroll", (e) => {
 const nextPage = document.getElementById("main__btn-abs");
 const setSlide = document.querySelector(".main__slider");
 
-let firstSlide = 0;
+
+
 nextPage.addEventListener("click", () => {
+    let actived = document.querySelector(".main-bar-single.active");
+    let firstSlide = 0;
     firstSlide -= 25;
     console.log(firstSlide);
     setSlide.style.transform = `translateX(${firstSlide}%)`;
-    setTimeout(() => {
-        if (!lineAbout2.classList.contains("fullline")) {
+    const setBarspec = document.getElementById("special-bar");
+    actived.classList.remove("active");
+    lineBarSingle.forEach((line) => {
+        line.style.background = "#000";
+    })
+    if (!setBarspec.classList.contains("active")) {
+        setBarspec.classList.add("active");
+    }
+    if (firstSlide = -25) {
+        setTimeout(() => {
             lineAbout2.classList.add("fullline");
-        } else {
+
+        }, 1000);
+
+    } else {
+        setTimeout(() => {
             lineAbout2.classList.remove("fullline");
-        }
-    }, 1000);
+
+        }, 1000);
+    }
+
 });
+
+
+
 //all property when click control btns
 const mainBtnPrev = document.getElementById("m__prev");
 const mainBtnNext = document.getElementById("m__next");
@@ -89,7 +109,6 @@ mainBtnNext.addEventListener("click", () => {
 
 });
 mainBtnPrev.addEventListener("click", () => {
-
         indexImg -= 100;
         indexTopic -= 1;
         if (indexImg < 0) {
@@ -105,26 +124,35 @@ const mainBarSingle = document.querySelectorAll(".main-bar-single");
 const lineBarSingle = document.querySelectorAll(".-bar-single");
 
 mainBarSingle.forEach((BarSingle, i) => {
+
+
     i = i * 25;
-    BarSingle.setAttribute(`style`, `--index:${i}`);
     BarSingle.addEventListener("click", () => {
-        const actived = document.querySelector(".main-bar-single.active");
+        let actived = document.querySelector(".main-bar-single.active");
+
         actived.classList.remove("active");
         setSlide.style.transform = `translateX(-${i}%)`;
         if (!BarSingle.classList.contains("active")) {
             BarSingle.classList.add("active");
         }
-
-
         lineBarSingle.forEach((line) => {
             if (i == 25) {
-                line.style.background = "#000";
+                setLine(line);
+                setTimeout(() => {
+                    if (!lineAbout2.classList.contains("fullline")) {
+                        lineAbout2.classList.add("fullline");
+                    }
+                }, 1000);
             } else {
                 line.style.background = "#fff";
-
+                lineAbout2.classList.remove("fullline");
             }
         })
-
     });
 
+
 })
+
+function setLine(lineOfMain) {
+    lineOfMain.style.background = "#000";
+}

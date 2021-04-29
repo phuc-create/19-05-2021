@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100;400");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +64,7 @@ body {
   display: flex;
   z-index: 1;
   transition: 0.8s cubic-bezier(0.88, 0.33, 0, 1.44);
-  transform: translateX(0%);
+  transform: translateX(75%);
 }
 .main .main__slider .main__content {
   position: relative;
@@ -290,14 +291,14 @@ body {
   text-transform: uppercase;
   color: #000;
 }
-.main .main__slider .main__page .s__main-l .main__txt ._m-line {
+.main .main__slider .main__page .s__main-l .main__txt ._m-line._m-line2 {
   width: 0%;
   height: 2px;
   background: #000;
   position: relative;
   transition: 0.5s ease;
 }
-.main .main__slider .main__page .s__main-l .main__txt ._m-line.fullline {
+.main .main__slider .main__page .s__main-l .main__txt ._m-line._m-line2.fullline {
   width: 100%;
 }
 .main .main__slider .main__page .s__main-l .s__main-sliderImg {
@@ -536,7 +537,127 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: red;
+  background: #000;
+  color: #fff;
+}
+.main .main__slider .main__last .__last-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main .main__slider .main__last .__last-wrapper .top__last {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-l {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  color: #fff;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1 {
+  font-family: "Krona One", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 5rem;
+  width: 100%;
+  height: calc(100% / 6);
+  text-align: right;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1:nth-child(2) .hire--btn {
+  width: 200px;
+  height: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1:nth-child(3) {
+  text-align: left;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1:nth-child(4) {
+  text-align: right;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r {
+  width: 30%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r .t__l-square {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+}
+.main .main__slider .main__last .__last-wrapper .bot__last {
+  width: 100%;
+  height: 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main .main__slider .main__last .__last-wrapper .bot__last .bot-img-wrap {
+  position: relative;
+  width: calc(100% / 5);
+  height: 90%;
+}
+.main .main__slider .main__last .__last-wrapper .bot__last .bot-img-wrap img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.main .main__slider .main__last .__last-wrapper .bot__last .circle-bl {
+  width: 19%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__slider .main__last .__last-wrapper .bot__last .circle-bl .crl-bl {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .main .main__control-bar {
   position: absolute;
@@ -568,9 +689,6 @@ body {
   background: #fff;
   transition: 0.3s;
   cursor: pointer;
-}
-.main .main__control-bar .main-bar-single:hover .-bar-single {
-  width: 80%;
 }
 .main .main__control-bar .main-bar-single.active .-bar-single {
   width: 80%;
