@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100;400");
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+:root {
+  --Korona: "Krona One", sans-serif;
+  --Montserrat: "Montserrat", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -12,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 }
 
 .app {
@@ -23,6 +28,7 @@ body {
   height: 100vh;
   width: 100%;
   background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(0, 0, 0, 0.9)), repeating-linear-gradient(0, transparent, transparent 4px, black 0px, black -3px), url("../img/init.jpg");
+  background: #000;
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -63,8 +69,8 @@ body {
   height: 100%;
   display: flex;
   z-index: 1;
-  transition: 0.8s cubic-bezier(0.88, 0.33, 0, 1.44);
-  transform: translateX(75%);
+  transition: 0.4s ease;
+  transform: translateX(0%);
 }
 .main .main__slider .main__content {
   position: relative;
@@ -116,7 +122,7 @@ body {
 .main .main__slider .main__content .main__overlay.is-active {
   background: rgba(0, 0, 0, 0.7);
 }
-.main .main__slider .main__content .main__left,
+.main .main__slider .main__content .main__left-half,
 .main .main__slider .main__content .main__right {
   height: 100%;
   color: #fff;
@@ -125,43 +131,81 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.main .main__slider .main__content .main__left {
-  width: 55%;
-  padding-left: 5%;
-  transition: 0.5s ease;
+.main .main__slider .main__content .main__left-abs {
+  font-family: "Krona One", sans-serif !important;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
 }
-.main .main__slider .main__content .main__left p {
-  font-size: 25px;
+.main .main__slider .main__content .main__left-abs p {
+  position: relative;
+  font-size: 5vw;
 }
-.main .main__slider .main__content .main__left p .splited {
+.main .main__slider .main__content .main__left-abs p .splited {
   transition: all 0.5s ease;
 }
-.main .main__slider .main__content .main__left p:hover .splited {
+.main .main__slider .main__content .main__left-abs p:hover .splited {
   margin-right: 1px;
 }
-.main .main__slider .main__content .main__left h1 {
-  font-size: 35px;
+.main .main__slider .main__content .main__left-abs p:nth-child(1) {
+  font-size: 3vw;
+  width: 30%;
+  left: 5%;
+}
+.main .main__slider .main__content .main__left-abs p:nth-child(2) {
+  font-size: 5vw;
+}
+.main .main__slider .main__content .main__left-abs p:nth-child(3) {
+  font-size: 3vw;
+  text-align: center;
+  left: 31%;
+  width: 32%;
+}
+.main .main__slider .main__content .main__left-abs p:nth-child(4) {
+  position: absolute;
+  font-size: 4vw;
+  text-align: right;
+  width: 70%;
+  right: 11%;
+}
+.main .main__slider .main__content .main__left-abs p:nth-child(5) {
+  position: absolute;
+  font-size: 5vw;
+  text-align: right;
+  bottom: 11%;
+  right: 0;
+}
+.main .main__slider .main__content .main__left-abs h1 {
+  width: 40%;
+  position: relative;
+  font-size: 3vw;
   font-weight: 700;
+  left: 5%;
 }
-.main .main__slider .main__content .main__left h1 .splited {
+.main .main__slider .main__content .main__left-abs h1 .splited {
   transition: all 0.5s ease;
 }
-.main .main__slider .main__content .main__left h1:hover .splited {
+.main .main__slider .main__content .main__left-abs h1:hover .splited {
   margin-right: 1px;
 }
-.main .main__slider .main__content .main__left .main__btn {
+.main .main__slider .main__content .main__left-abs .main__btn {
   width: 200px;
   height: 40px;
+  bottom: -10%;
+  left: 5%;
   position: relative;
   text-align: left;
   background: transparent;
   color: #fff;
-  font-size: 25px;
+  font-size: 35px;
   outline: none;
   border: none;
   cursor: pointer;
 }
-.main .main__slider .main__content .main__left .main__btn:before {
+.main .main__slider .main__content .main__left-abs .main__btn:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -171,19 +215,24 @@ body {
   background: #fff;
   transition: 0.2s;
 }
-.main .main__slider .main__content .main__left .main__btn:hover:before {
+.main .main__slider .main__content .main__left-abs .main__btn:hover:before {
   width: 100%;
 }
-.main .main__slider .main__content .main__left .main__btn .main__btn-abs {
+.main .main__slider .main__content .main__left-abs .main__btn .main__btn-abs {
   position: absolute;
-  top: 50%;
+  top: 35%;
   right: 5%;
   opacity: 0;
   transition: 0.4s;
 }
-.main .main__slider .main__content .main__left .main__btn:hover > .main__btn-abs {
+.main .main__slider .main__content .main__left-abs .main__btn:hover > .main__btn-abs {
   opacity: 1;
   right: -8%;
+}
+.main .main__slider .main__content .main__left-half {
+  width: 55%;
+  padding-left: 5%;
+  transition: 0.5s ease;
 }
 .main .main__slider .main__content .main__right {
   width: 45%;
@@ -219,8 +268,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 75%;
+  height: 70%;
 }
 .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img::before {
   content: "";
@@ -263,6 +312,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: var(--Korona);
 }
 .main .main__slider .main__page .s__main-l {
   position: relative;
@@ -285,6 +335,7 @@ body {
   z-index: 1;
 }
 .main .main__slider .main__page .s__main-l .main__txt h1._m-text {
+  font-family: var(--Montserrat) !important;
   position: relative;
   text-align: center;
   font-size: 2rem;
@@ -469,7 +520,7 @@ body {
 .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-content .s__main-content-wr h1 {
   height: calc(100% / 4);
   width: 100%;
-  font-size: 7vw;
+  font-size: 6vw;
 }
 .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-long-ct {
   position: relative;
@@ -509,29 +560,112 @@ body {
   align-items: center;
   perspective: 1200px;
 }
+.main .main__slider .main__simple .main__txt {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+}
+.main .main__slider .main__simple .main__txt h1._m-text {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main .main__slider .main__simple .main__txt ._m-line._m-line3 {
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  transition: 0.5s ease;
+}
+.main .main__slider .main__simple .main__txt ._m-line._m-line3.fullline {
+  width: 100%;
+}
 .main .main__slider .main__simple .__simple-wrapper {
-  perspective: 2000px;
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.main .main__slider .main__simple .__simple-wrapper .__sp-bx {
-  width: 250px;
-  height: 500px;
-  border: 1px solid #fff;
-  border-radius: 10px;
+.main .main__slider .main__simple .__simple-wrapper .__sp-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 34%;
+  position: relative;
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row .__sp-bx {
+  position: relative;
+  width: 25%;
+  height: 300px;
+  background: rgba(112, 107, 107, 0.07);
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 5px;
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row .__sp-bx .__sp-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 25px 10px 0px 10px;
+  transition: all 0.275s, visibility 0s 0.275s;
+  will-change: transform;
+  visibility: hidden;
+  transform: translateY(100%);
+  background: #000000d9;
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row .__sp-bx .__sp-content p {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row .__sp-bx .__sp-content span {
+  font-size: 17px;
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row:hover ~ .__sp-row .__sp-content {
+  transform: translateY(-100%);
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row:hover .__sp-content {
+  transform: translateX(100%);
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row:hover .__sp-bx:hover ~ .__sp-bx .__sp-content {
+  transform: translateX(-100%);
+}
+.main .main__slider .main__simple .__simple-wrapper .__sp-row:hover .__sp-bx:hover .__sp-content {
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
 }
 .main .main__slider .main__simple img {
-  width: 200px;
-  height: 300px;
+  width: 140px;
+  height: 165px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 .main .main__slider .main__last {
   width: 100%;
@@ -564,6 +698,7 @@ body {
   width: 70%;
   height: 100%;
   color: #fff;
+  transition: 0.5s;
 }
 .main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1 {
   font-family: "Krona One", sans-serif;
@@ -595,6 +730,7 @@ body {
   border: none;
   outline: none;
   border-radius: 30px;
+  text-decoration: none;
 }
 .main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1:nth-child(3) {
   text-align: left;
@@ -602,13 +738,35 @@ body {
 .main .main__slider .main__last .__last-wrapper .top__last .t__l-l h1:nth-child(4) {
   text-align: right;
 }
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-l.active {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
 .main .main__slider .main__last .__last-wrapper .top__last .t__l-r {
   width: 30%;
   height: 100%;
   position: relative;
+  transition: 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r .set-space {
+  display: none;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r .-square-imgs {
+  position: relative;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  width: 0%;
+  height: 0%;
+  transition: 0.5s;
+  float: left;
+  overflow: hidden;
 }
 .main .main__slider .main__last .__last-wrapper .top__last .t__l-r .t__l-square {
   width: 80%;
@@ -617,6 +775,47 @@ body {
   justify-content: center;
   align-items: center;
   border: 2px solid #fff;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r.active {
+  width: 100%;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r.active .set-space {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+  transition-delay: 1s;
+  font-family: var(--Korona);
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r.active .t__l-square {
+  width: 98%;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r.active .-square-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r.active .-square-imgs .imgs-city-show {
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.main .main__slider .main__last .__last-wrapper .top__last .t__l-r.active .unset-space {
+  display: none;
 }
 .main .main__slider .main__last .__last-wrapper .bot__last {
   width: 100%;
@@ -639,7 +838,7 @@ body {
   background-size: cover;
 }
 .main .main__slider .main__last .__last-wrapper .bot__last .circle-bl {
-  width: 19%;
+  width: 18%;
   height: 90%;
   position: relative;
   display: flex;
@@ -648,6 +847,7 @@ body {
 }
 .main .main__slider .main__last .__last-wrapper .bot__last .circle-bl .crl-bl {
   width: 100%;
+  text-decoration: none;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -661,7 +861,7 @@ body {
 }
 .main .main__control-bar {
   position: absolute;
-  top: 0%;
+  top: -3%;
   left: 50%;
   width: 40%;
   height: 10%;
@@ -683,8 +883,8 @@ body {
 }
 .main .main__control-bar .main-bar-single .-bar-single {
   position: relative;
-  width: 5%;
-  height: 4px;
+  width: 10%;
+  height: 10px;
   border-radius: 15px;
   background: #fff;
   transition: 0.3s;
