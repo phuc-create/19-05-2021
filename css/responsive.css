@@ -1,0 +1,391 @@
+@media only screen and (max-width: 1600px) {
+  h1.txt {
+    font-size: 8vw;
+  }
+
+  /*.main .main__slider .main__page {
+      flex-direction: column;
+      .s__main-l {
+          width: 100%;
+          height: 65%;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .s__main-sliderImg {
+              position: absolute;
+              top: 15%;
+              width: 31%;
+              height: 95%;
+              left: 5%;
+          }
+          .__m--btn-control {
+              z-index: 2;
+              bottom: -11%;
+              right: 20%;
+              width: 30%;
+          }
+      }
+      .s__main-r {
+          width: 100%;
+          height: 35%;
+          .s__main-content-slide .s_main-ct-wapper {
+              .s__main-content {
+                  position: absolute;
+                  height: 70%;
+                  top: -160%;
+                  right: -40%;
+                  .s__main-content-wr h1 {
+                      font-size: 6vw;
+                  }
+              }
+              .s__main-long-ct {
+                  position: absolute;
+                  width: 91%;
+                  height: 100%;
+                  top: 5%;
+                  left: 4.8%;
+                  .long-content-wr .-long-ct p {
+                      font-size: 1.7vw;
+                  }
+              }
+          }
+      }
+  }*/
+  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
+    left: 20%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
+    right: 22%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
+    bottom: 25%;
+  }
+  .main .main__slider .main__content .main__left-abs .main__btn {
+    font-size: 30px;
+  }
+  .main .main__slider .main__content .main__left-abs .main__btn .main__btn-abs {
+    top: 41%;
+  }
+  .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img {
+    width: 100%;
+  }
+  .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  h1.txt {
+    font-size: 7vw;
+  }
+
+  /*.main .main__slider .main__page {
+      flex-direction: column;
+      .s__main-l {
+          width: 100%;
+          height: 65%;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .s__main-sliderImg {
+              position: absolute;
+              top: 15%;
+              width: 31%;
+              height: 95%;
+              left: 5%;
+          }
+          .__m--btn-control {
+              z-index: 2;
+              bottom: -11%;
+              right: 20%;
+              width: 30%;
+          }
+      }
+      .s__main-r {
+          width: 100%;
+          height: 35%;
+          .s__main-content-slide .s_main-ct-wapper {
+              .s__main-content {
+                  position: absolute;
+                  height: 70%;
+                  top: -160%;
+                  right: -40%;
+                  .s__main-content-wr h1 {
+                      font-size: 6vw;
+                  }
+              }
+              .s__main-long-ct {
+                  position: absolute;
+                  width: 91%;
+                  height: 100%;
+                  top: 5%;
+                  left: 4.8%;
+                  .long-content-wr .-long-ct p {
+                      font-size: 1.7vw;
+                  }
+              }
+          }
+      }
+  }*/
+  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
+    left: 20%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
+    right: 22%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
+    bottom: 25%;
+  }
+  .main .main__slider .main__content .main__left-abs .main__btn {
+    font-size: 30px;
+  }
+  .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img {
+    width: 100%;
+  }
+  .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img img {
+    width: 100%;
+  }
+  .main .main__slider .main__page .s__main-l .s__main-sliderImg {
+    left: 5%;
+    width: 85%;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-long-ct .long-content-wr .-long-ct {
+    padding-right: 1%;
+  }
+
+  .main .main__control-bar {
+    width: 50%;
+  }
+  .main .main__control-bar .main-bar-single .-bar-single {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  h1.txt {
+    font-size: 8vw;
+  }
+
+  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
+    font-size: 6vw;
+    bottom: 24%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
+    bottom: -10%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
+    bottom: 60%;
+  }
+  .main .main__slider .main__content .main__left-abs .main__btn {
+    bottom: -25%;
+  }
+  .main .main__slider .main__page .s__main-l {
+    width: 50%;
+  }
+  .main .main__slider .main__page .s__main-r {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  h1.txt {
+    font-size: 8vw;
+  }
+
+  .span {
+    font-size: 12px;
+  }
+
+  .main .main__slider .main__content .main__right .__right-pic {
+    width: 129%;
+  }
+  .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img {
+    left: -25%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  h1.txt {
+    font-size: 8vw;
+  }
+
+  .span {
+    font-size: 12px;
+  }
+
+  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
+    font-size: 5vw;
+    text-align: center;
+    left: 19%;
+    width: 50%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
+    font-size: 5vw;
+    text-align: left;
+    width: 75%;
+    right: 2%;
+  }
+  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
+    right: 9%;
+    font-size: 7vw;
+  }
+  .main .main__slider .main__content .main__txt {
+    width: 118px;
+  }
+  .main .main__slider .main__content .main__txt h1._m-text {
+    font-size: 20px;
+  }
+  .main .main__slider .main__page .s__main-l {
+    width: 55%;
+  }
+  .main .main__slider .main__page .s__main-l .main__txt {
+    width: 100px;
+  }
+  .main .main__slider .main__page .s__main-l .main__txt h1._m-text {
+    font-size: 20px;
+  }
+  .main .main__slider .main__page .s__main-l .s__main-sliderImg .tem__content {
+    width: 205px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .main .main__slider .main__page .s__main-r {
+    width: 45%;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-long-ct .long-content-wr .-long-ct p {
+    font-size: 20px;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-content {
+    height: 20%;
+  }
+
+  .main .main__control-bar {
+    width: 70%;
+  }
+  .main .main__control-bar .main-bar-single .-bar-single {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  h1.txt {
+    font-size: 8vw;
+  }
+
+  .span {
+    font-size: 12px;
+  }
+
+  .main .main__slider .main__content .main__left-half {
+    display: none;
+  }
+  .main .main__slider .main__content .main__left-abs {
+    position: absolute;
+    top: 20%;
+    justify-content: space-around;
+    display: flex;
+    color: #fff;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 60%;
+    left: 6%;
+  }
+  .main .main__slider .main__content .main__left-abs p,
+.main .main__slider .main__content .main__left-abs h1 {
+    position: relative !important;
+    top: unset;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    width: unset !important;
+    height: unset;
+    text-align: unset !important;
+    font-size: 20px !important;
+  }
+  .main .main__slider .main__content .main__left-abs .main__btn {
+    width: 100px;
+    height: 40px;
+    bottom: unset;
+    left: unset;
+    text-align: left;
+    font-size: 20px;
+  }
+  .main .main__slider .main__content .main__left-abs .main__btn .main__btn-abs {
+    top: 57%;
+  }
+  .main .main__slider .main__content .main__right {
+    width: 100%;
+    position: relative;
+  }
+  .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img {
+    height: 100%;
+  }
+
+  .main .main__control-bar {
+    width: 100%;
+  }
+  .main .main__control-bar .main-bar-single .-bar-single {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  h1.txt {
+    font-size: 8vw;
+  }
+
+  .span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .main .main__slider .main__page {
+    flex-direction: column;
+  }
+  .main .main__slider .main__page .s__main-l {
+    width: 100%;
+    height: 65%;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .main .main__slider .main__page .s__main-l .s__main-sliderImg {
+    left: unset !important;
+    top: 11%;
+    position: relative;
+  }
+  .main .main__slider .main__page .s__main-l .__m--btn-control {
+    bottom: -11%;
+    width: 63%;
+    height: 65px;
+    right: unset;
+    position: relative;
+  }
+  .main .main__slider .main__page .s__main-l .__m--btn-control .m__prev button.m__prev-btn,
+.main .main__slider .main__page .s__main-l .__m--btn-control .m__prev button.m__next-btn,
+.main .main__slider .main__page .s__main-l .__m--btn-control .m__next button.m__prev-btn,
+.main .main__slider .main__page .s__main-l .__m--btn-control .m__next button.m__next-btn {
+    width: 35px;
+    height: 35px;
+  }
+  .main .main__slider .main__page .s__main-r {
+    width: 100%;
+    height: 35%;
+    align-items: flex-start;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide {
+    height: 100%;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper {
+    height: 100%;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-content {
+    height: 18%;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-content .s__main-content-wr h1 {
+    padding-left: 30px;
+    font-size: 25px;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-long-ct {
+    height: 82%;
+  }
+  .main .main__slider .main__page .s__main-r .s__main-content-slide .s_main-ct-wapper .s__main-long-ct .long-content-wr .-long-ct p {
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    word-break: break-word;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

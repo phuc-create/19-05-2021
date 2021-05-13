@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100;400");
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 :root {
-  --Korona: "Krona One", sans-serif;
+  --Korona: "Montserrat", sans-serif;
   --Montserrat: "Montserrat", sans-serif;
+  --temporatory: K"rona One", sans-serif;
 }
 
 * {
@@ -65,12 +66,13 @@ body {
 }
 .main .main__slider {
   position: relative;
-  width: 400%;
+  width: 200vw;
   height: 100%;
   display: flex;
   z-index: 1;
   transition: 0.4s ease;
-  transform: translateX(0%);
+  transform: translateX(-50%);
+  overflow: hidden;
 }
 .main .main__slider .main__content {
   position: relative;
@@ -176,7 +178,7 @@ body {
   font-size: 5vw;
   text-align: right;
   bottom: 11%;
-  right: 0;
+  right: 2%;
 }
 .main .main__slider .main__content .main__left-abs h1 {
   width: 40%;
@@ -439,42 +441,17 @@ body {
   transition: 0.3s;
   cursor: pointer;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main .main__slider .main__page .s__main-l .__m--btn-control .m__prev i {
-  position: absolute;
-  top: 40%;
-  left: 48%;
+.main .main__slider .main__page .s__main-l .__m--btn-control .m__prev button.m__prev-btn i,
+.main .main__slider .main__page .s__main-l .__m--btn-control .m__prev button.m__next-btn i,
+.main .main__slider .main__page .s__main-l .__m--btn-control .m__next button.m__prev-btn i,
+.main .main__slider .main__page .s__main-l .__m--btn-control .m__next button.m__next-btn i {
+  position: relative;
   font-size: 17px;
   transition: 0.2s;
-}
-.main .main__slider .main__page .s__main-l .__m--btn-control .m__prev:hover button {
-  width: 20%;
-  height: 3px;
-  background: #000;
-  border-radius: 0%;
-  border: none;
-  outline: none;
-}
-.main .main__slider .main__page .s__main-l .__m--btn-control .m__prev:hover i {
-  left: 39%;
-}
-.main .main__slider .main__page .s__main-l .__m--btn-control .m__next i {
-  position: absolute;
-  top: 40%;
-  right: 48%;
-  font-size: 17px;
-  transition: 0.2s;
-}
-.main .main__slider .main__page .s__main-l .__m--btn-control .m__next:hover button {
-  width: 20%;
-  height: 3px;
-  background: #000;
-  border-radius: 0%;
-  border: none;
-  outline: none;
-}
-.main .main__slider .main__page .s__main-l .__m--btn-control .m__next:hover i {
-  right: 39%;
 }
 .main .main__slider .main__page .s__main-r {
   width: 60%;
@@ -838,8 +815,8 @@ body {
   background-size: cover;
 }
 .main .main__slider .main__last .__last-wrapper .bot__last .circle-bl {
-  width: 18%;
-  height: 90%;
+  width: 337px;
+  height: 337px;
   position: relative;
   display: flex;
   justify-content: center;

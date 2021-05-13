@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100;400');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 :root {
-    --Korona: "Krona One", sans-serif;
+    --Korona: "Montserrat", sans-serif;
     --Montserrat: "Montserrat", sans-serif;
+    --temporatory: K"rona One", sans-serif;
 }
 
 * {
@@ -70,12 +71,13 @@ body {
     overflow: hidden;
     .main__slider {
         position: relative;
-        width: 400%;
+        width: 200vw;
         height: 100%;
         display: flex;
         z-index: 1;
         transition: 0.4s ease;
-        transform: translateX(0%);
+        transform: translateX(-50%);
+        overflow: hidden;
         .main__content {
             position: relative;
             width: 100%;
@@ -173,7 +175,7 @@ body {
                         font-size: 5vw;
                         text-align: right;
                         bottom: 11%;
-                        right: 0;
+                        right: 2%;
                     }
                 }
                 h1 {
@@ -424,49 +426,11 @@ body {
                             transition: .3s;
                             cursor: pointer;
                             outline: none;
-                        }
-                    }
-                    .m__prev {
-                        i {
-                            position: absolute;
-                            top: 40%;
-                            left: 48%;
-                            font-size: 17px;
-                            transition: .2s;
-                        }
-                        &:hover {
-                            button {
-                                width: 20%;
-                                height: 3px;
-                                background: #000;
-                                border-radius: 0%;
-                                border: none;
-                                outline: none;
-                            }
+                            @include flex;
                             i {
-                                left: 39%;
-                            }
-                        }
-                    }
-                    .m__next {
-                        i {
-                            position: absolute;
-                            top: 40%;
-                            right: 48%;
-                            font-size: 17px;
-                            transition: .2s;
-                        }
-                        &:hover {
-                            button {
-                                width: 20%;
-                                height: 3px;
-                                background: #000;
-                                border-radius: 0%;
-                                border: none;
-                                outline: none;
-                            }
-                            i {
-                                right: 39%;
+                                position: relative;
+                                font-size: 17px;
+                                transition: .2s;
                             }
                         }
                     }
@@ -809,8 +773,8 @@ body {
                         }
                     }
                     .circle-bl {
-                        width: 18%;
-                        height: 90%;
+                        width: 337px;
+                        height: 337px;
                         position: relative;
                         @include flex;
                         .crl-bl {
