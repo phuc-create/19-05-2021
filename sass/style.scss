@@ -68,16 +68,16 @@ body {
     height: 100vh;
     width: 100%;
     background: #000;
-    overflow: hidden;
+    //overflow: hidden;
     .main__slider {
         position: relative;
-        width: 200vw;
+        width: 400vw;
         height: 100%;
         display: flex;
         z-index: 1;
         transition: 0.4s ease;
-        transform: translateX(-50%);
-        overflow: hidden;
+        transform: translateX(-75%);
+        //overflow: hidden;
         .main__content {
             position: relative;
             width: 100%;
@@ -509,7 +509,6 @@ body {
         }
         .main__simple {
             width: 100%;
-            height: 100vh;
             position: relative;
             background: #000;
             @include flex;
@@ -611,8 +610,8 @@ body {
                 }
             }
             img {
-                width: 140px;
-                height: 165px;
+                max-width: 140px;
+                height: auto;
                 top: 0;
                 left: 0;
                 bottom: 0;

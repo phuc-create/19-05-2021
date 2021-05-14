@@ -42,6 +42,7 @@ txtP.forEach((txtSingleP) => {
 });
 //set scroll for wwindow
 document.addEventListener("scroll", (e) => {
+    console.log(window.scrollY);
     let windowScroll = window.scrollY;
     if (windowScroll > 181) {
         lineAbout.classList.add("setFull");

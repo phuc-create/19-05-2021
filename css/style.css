@@ -62,17 +62,15 @@ body {
   height: 100vh;
   width: 100%;
   background: #000;
-  overflow: hidden;
 }
 .main .main__slider {
   position: relative;
-  width: 200vw;
+  width: 400vw;
   height: 100%;
   display: flex;
   z-index: 1;
   transition: 0.4s ease;
-  transform: translateX(-50%);
-  overflow: hidden;
+  transform: translateX(-75%);
 }
 .main .main__slider .main__content {
   position: relative;
@@ -529,7 +527,6 @@ body {
 }
 .main .main__slider .main__simple {
   width: 100%;
-  height: 100vh;
   position: relative;
   background: #000;
   display: flex;
@@ -637,8 +634,8 @@ body {
   transition-delay: 0s;
 }
 .main .main__slider .main__simple img {
-  width: 140px;
-  height: 165px;
+  max-width: 140px;
+  height: auto;
   top: 0;
   left: 0;
   bottom: 0;
