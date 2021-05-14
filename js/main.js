@@ -42,7 +42,6 @@ txtP.forEach((txtSingleP) => {
 });
 //set scroll for wwindow
 document.addEventListener("scroll", (e) => {
-    console.log(window.scrollY);
     let windowScroll = window.scrollY;
     if (windowScroll > 181) {
         lineAbout.classList.add("setFull");
@@ -53,6 +52,7 @@ document.addEventListener("scroll", (e) => {
 //btn control in page 2
 const nextPage = document.getElementById("main__btn-abs");
 const setSlide = document.querySelector(".main__slider");
+const mainPage = document.querySelector(".main");
 
 nextPage.addEventListener("click", () => {
     let actived = document.querySelector(".main-bar-single.active");
@@ -68,6 +68,7 @@ nextPage.addEventListener("click", () => {
     if (!setBarspec.classList.contains("active")) {
         setBarspec.classList.add("active");
     }
+
     if ((firstSlide = -25)) {
         setTimeout(() => {
             lineAbout2.classList.add("fullline");
@@ -137,7 +138,13 @@ mainBarSingle.forEach((BarSingle, i) => {
                 line.style.background = "#fff";
                 lineAbout2.classList.remove("fullline");
             }
-
+            if (i == 50) {
+                if (!mainPage.classList.contains("setOver")) {
+                    mainPage.classList.add("setOver");
+                }
+            } else {
+                mainPage.classList.remove("setOver");
+            }
             if (i == 50) {
                 setTimeout(() => {
                     if (!lineAbout3.classList.contains("fullline")) {
@@ -157,7 +164,25 @@ function setLine(lineOfMain) {
 
 const tll = document.querySelector(".t__l-l");
 const tlr = document.querySelector(".t__l-r");
-tlr.addEventListener("click", () => {
+const circleBl = document.querySelector(".circle-bl");
+var arrEvent = ["DOMContentLoaded", "resize", "load"];
+arrEvent.map((singleE) => {
+    window.addEventListener(singleE, (e) => {
+        if (innerWidth < 768) {
+            if (!circleBl.classList.contains("set-hide")) {
+                circleBl.classList.add("set-hide");
+            }
+        } else {
+            circleBl.classList.remove("set-hide");
+        }
+    });
+});
+
+tlr.addEventListener("click", (e) => {
+    let cirleHide = document.querySelector(".circle-bl.set-hide");
+    if (cirleHide) {
+        cirleHide.classList.toggle("hide");
+    }
     tll.classList.toggle("active");
     tlr.classList.toggle("active");
 });

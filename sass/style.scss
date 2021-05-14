@@ -3,7 +3,7 @@
 :root {
     --Korona: "Montserrat", sans-serif;
     --Montserrat: "Montserrat", sans-serif;
-    --temporatory: K"rona One", sans-serif;
+    --temporatory: "Krona One", sans-serif;
 }
 
 * {
@@ -68,7 +68,7 @@ body {
     height: 100vh;
     width: 100%;
     background: #000;
-    //overflow: hidden;
+    overflow: hidden;
     .main__slider {
         position: relative;
         width: 400vw;
@@ -76,8 +76,7 @@ body {
         display: flex;
         z-index: 1;
         transition: 0.4s ease;
-        transform: translateX(-75%);
-        //overflow: hidden;
+        transform: translateX(0%);
         .main__content {
             position: relative;
             width: 100%;
@@ -133,7 +132,6 @@ body {
                 justify-content: center;
             }
             .main__left-abs {
-                font-family: "Krona One", sans-serif !important;
                 position: absolute;
                 top: 10%;
                 left: 0;
@@ -513,6 +511,7 @@ body {
             background: #000;
             @include flex;
             perspective: 1200px;
+            overflow-y: visible;
             .main__txt {
                 position: absolute;
                 top: 5%;
@@ -689,7 +688,7 @@ body {
                         width: 30%;
                         height: 100%;
                         position: relative;
-                        transition: .5s;
+                        transition: .3s;
                         @include flex;
                         cursor: pointer;
                         overflow: hidden;
@@ -712,6 +711,7 @@ body {
                             height: 90%;
                             @include flex;
                             border: 2px solid #fff;
+                            -webkit-user-select: none;
                         }
                         &.active {
                             width: 100%;
@@ -759,16 +759,30 @@ body {
                     height: 40%;
                     position: relative;
                     @include flex;
-                    justify-content: space-evenly;
-                    .bot-img-wrap {
+                    .bl-l {
                         position: relative;
-                        width: calc(100% / 5);
-                        height: 90%;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            background-position: center;
-                            background-size: cover;
+                        width: 75%;
+                        height: 100%;
+                        @include flex;
+                        justify-content: space-evenly;
+                        .bot-img-wrap {
+                            position: relative;
+                            width: calc(100% / 4);
+                            height: 90%;
+                            overflow: hidden;
+                            transition: .4s;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                background-position: center;
+                                background-size: cover;
+                                transition: .4s;
+                            }
+                            &:hover {
+                                img {
+                                    transform: scale(1.1);
+                                }
+                            }
                         }
                     }
                     .circle-bl {
@@ -776,6 +790,7 @@ body {
                         height: 337px;
                         position: relative;
                         @include flex;
+                        transition: .3s;
                         .crl-bl {
                             width: 100%;
                             text-decoration: none;
@@ -787,6 +802,12 @@ body {
                             background: #fff;
                             border-radius: 50%;
                             cursor: pointer;
+                            transition: .3s;
+                        }
+                        &.set-hide {
+                            &.hide {
+                                display: none !important;
+                            }
                         }
                     }
                 }
@@ -824,5 +845,9 @@ body {
                 }
             }
         }
+    }
+    &.setOver {
+        overflow: unset;
+        overflow-x: hidden;
     }
 }
