@@ -70,7 +70,7 @@ body {
   display: flex;
   z-index: 1;
   transition: 0.4s ease;
-  transform: translateX(-75%);
+  transform: translateX(0%);
 }
 .main .main__slider .main__content {
   position: relative;
