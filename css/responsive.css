@@ -186,6 +186,10 @@
     font-size: 8vw;
   }
 
+  .cursor {
+    display: none;
+  }
+
   .main .main__slider .main__content .main__left-abs p:nth-child(5) {
     font-size: 6vw;
     bottom: 24%;
@@ -343,7 +347,7 @@
     margin-bottom: 20px;
   }
   .main .main__slider .main__last .__last-wrapper .top__last {
-    height: 73%;
+    height: 71%;
     flex-direction: column;
   }
   .main .main__slider .main__last .__last-wrapper .top__last .t__l-l {
@@ -364,7 +368,11 @@
     font-size: 6vw;
   }
   .main .main__slider .main__last .__last-wrapper .bot__last {
-    height: 27%;
+    height: 29%;
+  }
+  .main .main__slider .main__last .__last-wrapper .bot__last .circle-bl {
+    height: 190px;
+    width: 190px;
   }
 
   .main .main__control-bar {
@@ -379,8 +387,8 @@
     height: 325vh;
   }
   .main .main__slider .main__simple .__simple-wrapper {
-    height: 84%;
-    top: -2%;
+    height: 95%;
+    top: 1%;
     margin-top: unset;
   }
   .main .main__slider .main__simple .__simple-wrapper .__sp-row {
@@ -483,19 +491,19 @@
   }
   .main .main__slider .main__page .s__main-l {
     width: 100%;
-    height: 65%;
+    height: 62%;
     justify-content: flex-start;
     flex-direction: column;
   }
   .main .main__slider .main__page .s__main-l .s__main-sliderImg {
     left: unset !important;
-    top: 11%;
+    top: 14%;
     position: relative;
   }
   .main .main__slider .main__page .s__main-l .__m--btn-control {
-    bottom: -11%;
+    bottom: -14%;
     width: 63%;
-    height: 65px;
+    height: 45px;
     right: unset;
     position: relative;
   }
@@ -508,7 +516,7 @@
   }
   .main .main__slider .main__page .s__main-r {
     width: 100%;
-    height: 35%;
+    height: 38%;
     align-items: flex-start;
   }
   .main .main__slider .main__page .s__main-r .s__main-content-slide {
