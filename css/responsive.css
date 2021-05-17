@@ -50,21 +50,6 @@
           }
       }
   }*/
-  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
-    left: 20%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
-    right: 22%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
-    bottom: 25%;
-  }
-  .main .main__slider .main__content .main__left-abs .main__btn {
-    font-size: 30px;
-  }
-  .main .main__slider .main__content .main__left-abs .main__btn .main__btn-abs {
-    top: 41%;
-  }
   .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img {
     width: 100%;
   }
@@ -134,18 +119,6 @@
           }
       }
   }*/
-  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
-    left: 20%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
-    right: 22%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
-    bottom: 25%;
-  }
-  .main .main__slider .main__content .main__left-abs .main__btn {
-    font-size: 30px;
-  }
   .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img {
     width: 100%;
   }
@@ -190,19 +163,6 @@
     display: none;
   }
 
-  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
-    font-size: 6vw;
-    bottom: 24%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
-    bottom: -10%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
-    bottom: 60%;
-  }
-  .main .main__slider .main__content .main__left-abs .main__btn {
-    bottom: -25%;
-  }
   .main .main__slider .main__page .s__main-l {
     width: 50%;
   }
@@ -294,22 +254,6 @@
     font-size: 12px;
   }
 
-  .main .main__slider .main__content .main__left-abs p:nth-child(3) {
-    font-size: 5vw;
-    text-align: center;
-    left: 19%;
-    width: 50%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(4) {
-    font-size: 5vw;
-    text-align: left;
-    width: 75%;
-    right: 2%;
-  }
-  .main .main__slider .main__content .main__left-abs p:nth-child(5) {
-    right: 9%;
-    font-size: 7vw;
-  }
   .main .main__slider .main__content .main__txt {
     width: 118px;
     top: 4%;
@@ -412,41 +356,6 @@
 
   .main .main__slider .main__content .main__left-half {
     display: none;
-  }
-  .main .main__slider .main__content .main__left-abs {
-    position: absolute;
-    top: 20%;
-    justify-content: space-around;
-    display: flex;
-    color: #fff;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 60%;
-    left: 6%;
-  }
-  .main .main__slider .main__content .main__left-abs p,
-.main .main__slider .main__content .main__left-abs h1 {
-    position: relative !important;
-    top: unset;
-    left: unset !important;
-    right: unset !important;
-    bottom: unset !important;
-    width: unset !important;
-    height: unset;
-    text-align: unset !important;
-    font-size: 19px !important;
-    padding-right: 30px;
-  }
-  .main .main__slider .main__content .main__left-abs .main__btn {
-    width: 100px;
-    height: 40px;
-    bottom: unset;
-    left: unset;
-    text-align: left;
-    font-size: 20px;
-  }
-  .main .main__slider .main__content .main__left-abs .main__btn .main__btn-abs {
-    top: 57%;
   }
   .main .main__slider .main__content .main__right {
     width: 100%;

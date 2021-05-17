@@ -104,23 +104,6 @@ $res_375: "only screen and (max-width: 375px)";
     }*/
     .main .main__slider {
         .main__content {
-            .main__left-abs {
-                p:nth-child(3) {
-                    left: 20%;
-                }
-                p:nth-child(4) {
-                    right: 22%;
-                }
-                p:nth-child(5) {
-                    bottom: 25%;
-                }
-                .main__btn {
-                    font-size: 30px;
-                    .main__btn-abs {
-                        top: 41%;
-                    }
-                }
-            }
             .main__right .__right-pic .main__wrapper-img {
                 width: 100%;
                 img {
@@ -199,20 +182,6 @@ $res_375: "only screen and (max-width: 375px)";
     }*/
     .main .main__slider {
         .main__content {
-            .main__left-abs {
-                p:nth-child(3) {
-                    left: 20%;
-                }
-                p:nth-child(4) {
-                    right: 22%;
-                }
-                p:nth-child(5) {
-                    bottom: 25%;
-                }
-                .main__btn {
-                    font-size: 30px;
-                }
-            }
             .main__right .__right-pic .main__wrapper-img {
                 width: 100%;
                 img {
@@ -262,21 +231,6 @@ $res_375: "only screen and (max-width: 375px)";
         display: none;
     }
     .main .main__slider {
-        .main__content .main__left-abs {
-            p:nth-child(5) {
-                font-size: 6vw;
-                bottom: 24%;
-            }
-            p:nth-child(3) {
-                bottom: -10%;
-            }
-            p:nth-child(4) {
-                bottom: 60%;
-            }
-            .main__btn {
-                bottom: -25%;
-            }
-        }
         .main__page {
             .s__main-l {
                 width: 50%;
@@ -380,24 +334,6 @@ $res_375: "only screen and (max-width: 375px)";
     }
     .main .main__slider {
         .main__content {
-            .main__left-abs {
-                p:nth-child(3) {
-                    font-size: 5vw;
-                    text-align: center;
-                    left: 19%;
-                    width: 50%;
-                }
-                p:nth-child(4) {
-                    font-size: 5vw;
-                    text-align: left;
-                    width: 75%;
-                    right: 2%;
-                }
-                p:nth-child(5) {
-                    right: 9%;
-                    font-size: 7vw;
-                }
-            }
             .main__txt {
                 width: 118px;
                 top: 4%;
@@ -511,41 +447,6 @@ $res_375: "only screen and (max-width: 375px)";
         .main__content {
             .main__left-half {
                 display: none;
-            }
-            .main__left-abs {
-                position: absolute;
-                top: 20%;
-                justify-content: space-around;
-                display: flex;
-                color: #fff;
-                align-items: flex-start;
-                flex-direction: column;
-                height: 60%;
-                left: 6%;
-                p,
-                h1 {
-                    position: relative !important;
-                    top: unset;
-                    left: unset !important;
-                    right: unset !important;
-                    bottom: unset !important;
-                    width: unset !important;
-                    height: unset;
-                    text-align: unset !important;
-                    font-size: 19px !important;
-                    padding-right: 30px;
-                }
-                .main__btn {
-                    width: 100px;
-                    height: 40px;
-                    bottom: unset;
-                    left: unset;
-                    text-align: left;
-                    font-size: 20px;
-                    .main__btn-abs {
-                        top: 57%;
-                    }
-                }
             }
             .main__right {
                 width: 100%;

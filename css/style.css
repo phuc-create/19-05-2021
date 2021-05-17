@@ -123,87 +123,53 @@ body {
 .main .main__slider .main__content .main__overlay.is-active {
   background: rgba(0, 0, 0, 0.7);
 }
-.main .main__slider .main__content .main__left-half,
 .main .main__slider .main__content .main__right {
-  height: 100%;
+  height: 50%;
   color: #fff;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .main .main__slider .main__content .main__left-abs {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
+  position: relative;
+  width: 50%;
   height: 100%;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.main .main__slider .main__content .main__left-abs p {
-  position: relative;
-  font-size: 5vw;
-}
-.main .main__slider .main__content .main__left-abs p .splited {
-  transition: all 0.5s ease;
-}
-.main .main__slider .main__content .main__left-abs p:hover .splited {
-  margin-right: 1px;
-}
-.main .main__slider .main__content .main__left-abs p:nth-child(1) {
-  font-size: 3vw;
-  width: 30%;
-  left: 5%;
-}
-.main .main__slider .main__content .main__left-abs p:nth-child(2) {
-  font-size: 5vw;
-}
-.main .main__slider .main__content .main__left-abs p:nth-child(3) {
-  font-size: 3vw;
-  text-align: center;
-  left: 31%;
-  width: 32%;
-}
-.main .main__slider .main__content .main__left-abs p:nth-child(4) {
-  position: absolute;
-  font-size: 4vw;
-  text-align: right;
-  width: 70%;
-  right: 11%;
-}
-.main .main__slider .main__content .main__left-abs p:nth-child(5) {
-  position: absolute;
-  font-size: 5vw;
-  text-align: right;
-  bottom: 11%;
-  right: 2%;
-}
+.main .main__slider .main__content .main__left-abs p,
 .main .main__slider .main__content .main__left-abs h1 {
-  width: 40%;
   position: relative;
-  font-size: 3vw;
-  font-weight: 700;
-  left: 5%;
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 50px;
 }
+.main .main__slider .main__content .main__left-abs p .splited,
 .main .main__slider .main__content .main__left-abs h1 .splited {
   transition: all 0.5s ease;
 }
+.main .main__slider .main__content .main__left-abs p:hover .splited,
 .main .main__slider .main__content .main__left-abs h1:hover .splited {
   margin-right: 1px;
 }
 .main .main__slider .main__content .main__left-abs .main__btn {
   width: 200px;
   height: 40px;
-  bottom: -10%;
-  left: 5%;
   position: relative;
   text-align: left;
   background: transparent;
   color: #fff;
-  font-size: 35px;
+  font-size: 30px;
+  font-family: var(--Montserrat);
   outline: none;
   border: none;
   cursor: pointer;
+  font-weight: 700;
 }
 .main .main__slider .main__content .main__left-abs .main__btn:before {
   content: "";
@@ -229,18 +195,13 @@ body {
   opacity: 1;
   right: -8%;
 }
-.main .main__slider .main__content .main__left-half {
-  width: 55%;
-  padding-left: 5%;
-  transition: 0.5s ease;
-}
 .main .main__slider .main__content .main__right {
   width: 45%;
+  height: 100%;
 }
 .main .main__slider .main__content .main__right .__right-pic {
   position: relative;
   width: 100%;
-  height: 130%;
 }
 .main .main__slider .main__content .main__right .__right-pic::before {
   content: "";
@@ -265,11 +226,9 @@ body {
   pointer-events: none;
 }
 .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 75%;
-  height: 70%;
+  position: relative;
+  width: inherit;
+  height: inherit;
 }
 .main .main__slider .main__content .main__right .__right-pic .main__wrapper-img::before {
   content: "";
@@ -286,16 +245,17 @@ body {
   transition: 0.5s;
 }
 .main .main__slider .main__content .main__right .__right-pic img:nth-child(1), .main .main__slider .main__content .main__right .__right-pic img:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 .main .main__slider .main__content .main__right .__right-pic img:nth-child(1) {
   opacity: 0.7;
 }
 .main .main__slider .main__content .main__right .__right-pic img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
 }
 .main .main__slider .main__content .main__right .__right-pic img:hover:nth-child(1) {

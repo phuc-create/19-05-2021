@@ -122,66 +122,30 @@ body {
                     background: rgba(0, 0, 0, 0.7);
                 }
             }
-            .main__left-half,
             .main__right {
-                height: 100%;
+                height: 50%;
                 color: #fff;
                 display: flex;
                 align-items: flex-start;
                 flex-direction: column;
                 justify-content: center;
+                position: relative;
             }
             .main__left-abs {
-                position: absolute;
-                top: 10%;
-                left: 0;
-                width: 100%;
+                position: relative;
+                width: 50%;
                 height: 100%;
                 color: #fff;
-                p {
-                    position: relative;
-                    font-size: 5vw;
-                    .splited {
-                        transition: all .5s ease;
-                    }
-                    &:hover .splited {
-                        margin-right: 1px;
-                    }
-                    &:nth-child(1) {
-                        font-size: 3vw;
-                        width: 30%;
-                        left: 5%;
-                    }
-                    &:nth-child(2) {
-                        font-size: 5vw;
-                    }
-                    &:nth-child(3) {
-                        font-size: 3vw;
-                        text-align: center;
-                        left: 31%;
-                        width: 32%;
-                    }
-                    &:nth-child(4) {
-                        position: absolute;
-                        font-size: 4vw;
-                        text-align: right;
-                        width: 70%;
-                        right: 11%;
-                    }
-                    &:nth-child(5) {
-                        position: absolute;
-                        font-size: 5vw;
-                        text-align: right;
-                        bottom: 11%;
-                        right: 2%;
-                    }
-                }
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                p,
                 h1 {
-                    width: 40%;
                     position: relative;
-                    font-size: 3vw;
-                    font-weight: 700;
-                    left: 5%;
+                    font-size: 40px;
+                    font-weight: 400;
+                    padding-bottom: 50px;
                     .splited {
                         transition: all .5s ease;
                     }
@@ -192,16 +156,16 @@ body {
                 .main__btn {
                     width: 200px;
                     height: 40px;
-                    bottom: -10%;
-                    left: 5%;
                     position: relative;
                     text-align: left;
                     background: transparent;
                     color: #fff;
-                    font-size: 35px;
+                    font-size: 30px;
+                    font-family: var(--Montserrat);
                     outline: none;
                     border: none;
                     cursor: pointer;
+                    font-weight: 700;
                     &:before {
                         content: '';
                         position: absolute;
@@ -228,17 +192,12 @@ body {
                     }
                 }
             }
-            .main__left-half {
-                width: 55%;
-                padding-left: 5%;
-                transition: .5s ease;
-            }
             .main__right {
                 width: 45%;
+                height: 100%;
                 .__right-pic {
                     position: relative;
                     width: 100%;
-                    height: 130%;
                     &::before {
                         content: '';
                         position: absolute;
@@ -262,11 +221,9 @@ body {
                         pointer-events: none;
                     }
                     .main__wrapper-img {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 75%;
-                        height: 70%;
+                        position: relative;
+                        width: inherit;
+                        height: inherit;
                         &::before {
                             content: '';
                             position: absolute;
@@ -283,16 +240,17 @@ body {
                         transition: .5s;
                         &:nth-child(1),
                         &:nth-child(2) {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 80%;
-                            height: 100%;
+                            max-width: 100%;
+                            height: auto;
+                            display: block;
                         }
                         &:nth-child(1) {
                             opacity: .7;
                         }
                         &:nth-child(2) {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
                             opacity: 0;
                         }
                         &:hover {
