@@ -256,13 +256,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-}
-.main .main__slider .main__content .main__right .__right-pic img:hover:nth-child(1) {
-  opacity: 0;
-}
-.main .main__slider .main__content .main__right .__right-pic img:hover:nth-child(2) {
-  opacity: 1;
 }
 .main .main__slider .main__page {
   width: 100%;
@@ -527,7 +520,6 @@ body {
 .main .main__slider .main__simple .__simple-wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -538,7 +530,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 75%;
-  height: 34%;
   position: relative;
 }
 .main .main__slider .main__simple .__simple-wrapper .__sp-row .__sp-bx {
